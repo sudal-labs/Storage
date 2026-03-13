@@ -1,0 +1,13 @@
+package com.sudal.storage
+
+import org.springframework.boot.autoconfigure.SpringBootApplication
+import org.springframework.boot.runApplication
+import org.springframework.scheduling.annotation.EnableAsync
+
+@EnableAsync
+@SpringBootApplication
+class StorageApplication
+
+fun main(args: Array<String>) {
+    runApplication<StorageApplication>(*args)
+}
