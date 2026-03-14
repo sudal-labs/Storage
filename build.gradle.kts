@@ -36,6 +36,10 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("tools.jackson.module:jackson-module-kotlin")
 
+    // Coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor:1.10.2")
+
     // Database
     runtimeOnly("org.postgresql:postgresql")
 
@@ -44,10 +48,6 @@ dependencies {
 
     // Logging
     implementation("io.github.microutils:kotlin-logging-jvm:3.0.5")
-
-//    // Lombok
-//    compileOnly("org.projectlombok:lombok")
-//    annotationProcessor("org.projectlombok:lombok")
 
     // Test
     testImplementation("org.springframework.boot:spring-boot-starter-test")
