@@ -28,37 +28,30 @@ repositories {
 
 dependencies {
     // Spring Boot
-    implementation("org.springframework.boot:spring-boot-starter-webmvc")
+    implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-validation")
 
     // Kotlin
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
-    implementation("tools.jackson.module:jackson-module-kotlin")
 
-    // Coroutines
+    // Coroutine
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor:1.10.2")
 
     // Database
     runtimeOnly("org.postgresql:postgresql")
 
-    // Image Processing
+    // Image
     implementation("net.coobird:thumbnailator:0.4.20")
-
-    // Logging
     implementation("io.github.microutils:kotlin-logging-jvm:3.0.5")
 
     // Test
     testImplementation("org.springframework.boot:spring-boot-starter-test")
-    testImplementation("io.mockk:mockk:1.13.10")
+    testImplementation("io.mockk:mockk:1.13.16")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.10.2")
     testImplementation("com.h2database:h2")
-
-    testImplementation("org.springframework.boot:spring-boot-starter-data-jpa-test")
-    testImplementation("org.springframework.boot:spring-boot-starter-validation-test")
-    testImplementation("org.springframework.boot:spring-boot-starter-webmvc-test")
-    testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
-    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
 kotlin {
